@@ -1,0 +1,22 @@
+﻿<Window x:Class="NEB.Forms.AddSale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NEB.Forms"
+        mc:Ignorable="d"
+        Title="Добавление продажи" Height="263.453" Width="320.06" ResizeMode="NoResize">
+    <Grid>
+        <ComboBox Name="Seller" HorizontalAlignment="Left" Margin="91,57,0,0" VerticalAlignment="Top" Width="215" SelectionChanged="Seller_SelectionChanged"/>
+        <TextBox Name="PriceBox" HorizontalAlignment="Left" Height="23" Margin="91,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="215"/>
+        <DatePicker Name="SellTimePicker" HorizontalAlignment="Left" Margin="91,138,0,0" VerticalAlignment="Top" Width="215" SelectedDateFormat="Short" SelectedDateChanged="SellTimePicker_SelectedDateChanged"/>
+        <Button Name="AcceptButton" Content="Добавить" HorizontalAlignment="Left" Height="29" Margin="111,184,0,0" VerticalAlignment="Top" Width="116" Click="AcceptButton_Click"/>
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="47,14,0,0" VerticalAlignment="Top" Width="44"/>
+        <Label Content="Продавец" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="53,95,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата продажи" HorizontalAlignment="Left" Margin="0,136,0,0" VerticalAlignment="Top" Width="91"/>
+        <TextBox Name="SelectedProductBox" HorizontalAlignment="Left" Height="26" Margin="91,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="143" IsEnabled="False"/>
+        <Button Name="SelectProduct"  Content="Товар" HorizontalAlignment="Left" Height="26" Margin="239,18,0,0" VerticalAlignment="Top" Width="65" Click="SelectProduct_Click"/>
+
+    </Grid>
+</Window>

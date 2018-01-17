@@ -1,0 +1,46 @@
+﻿<Window x:Class="NEB.Models.Catalogs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NEB.Models"
+        mc:Ignorable="d"
+        Title="Справочники" Height="493.6" Width="833.6" ResizeMode="NoResize">
+    <Grid>
+        <GroupBox Name="ProductGroupBox" Header="Товары" HorizontalAlignment="Left" Height="448" Margin="10,9,0,0" VerticalAlignment="Top" Width="398">
+            <Grid Margin="0,0,-12.4,-2.4">
+                <DataGrid AutoGenerateColumns="False" Name="ProductGrid" HorizontalAlignment="Left" Height="296" Margin="9,10,0,0" VerticalAlignment="Top" Width="379" SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Title}"/>
+                        <DataGridTextColumn Header="Мин. цена" Binding="{Binding MinPrice}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="29" Margin="297,389,0,0" VerticalAlignment="Top" Width="91" Click="DeleteProduct_Click"/>
+                <Button Name="AddProduct"  Content="Добавить" HorizontalAlignment="Left" Margin="137,389,0,0" VerticalAlignment="Top" Width="91" Height="29" Click="AddProduct_Click"/>
+                <Label Content="Название:" HorizontalAlignment="Left" Margin="66,322,0,0" VerticalAlignment="Top"/>
+                <Label Content="Минимальная цена:" HorizontalAlignment="Left" Margin="9,352,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="TitleBox" HorizontalAlignment="Left" Height="23" Margin="137,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+                <TextBox Name="PriceBox" HorizontalAlignment="Left" Height="23" Margin="137,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="ManagerGroupBox" Header="Менеджеры" HorizontalAlignment="Left" Height="448" Margin="422,9,0,0" VerticalAlignment="Top" Width="398">
+            <Grid Margin="-7,0,-6.4,-6.4">
+                <DataGrid AutoGenerateColumns="False" Name="ManagerGrid" HorizontalAlignment="Left" Height="296" Margin="10,10,0,0" VerticalAlignment="Top" Width="379" SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button x:Name="DeleteManager" Content="Удалить" HorizontalAlignment="Left" Height="29" Margin="297,389,0,0" VerticalAlignment="Top" Width="91" Click="DeleteManager_Click" />
+                <Button x:Name="AddManager"  Content="Добавить" HorizontalAlignment="Left" Margin="137,389,0,0" VerticalAlignment="Top" Width="91" Height="29" Click="AddManager_Click" />
+                <Label Content="Имя:" HorizontalAlignment="Left" Margin="92,322,0,0" VerticalAlignment="Top"/>
+                <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="66,352,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="FirstnameBox" HorizontalAlignment="Left" Height="23" Margin="137,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+                <TextBox Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="137,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
